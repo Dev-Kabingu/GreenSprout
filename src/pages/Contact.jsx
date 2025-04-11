@@ -1,15 +1,17 @@
 import React from 'react'
+import { motion } from "framer-motion";
 import seedling from "../assets/seedling.jpg";
+import { MapPin, Phone, Mail } from 'lucide-react';
 const Contact = () => {
   return (
     <>
-    {/* First Section (Contact Information Section with Background Image) */}
     <section
         className="relative bg-cover bg-center py-20"
-        style={{ backgroundImage: `url(${seedling})` }}
+        style={{
+                  backgroundImage: `linear-gradient(to right, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.4)), url(${seedling})`,
+                }}
       >
         <div className="container mx-auto px-6 md:px-12">
-          {/* Contact Information Section */}
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-white mb-4">Get in Touch</h2>
             <p className="text-lg text-white mb-8">
@@ -19,11 +21,9 @@ const Contact = () => {
         </div>
       </section>
 
-      {/* Second Section (Contact Form and Contact Details) */}
-      <section className="relative bg-gray-50 py-20">
+      <section className="relative bg-green-100 py-20">
         <div className="container mx-auto px-6 md:px-12">
           <div className="md:flex md:space-x-16">
-            {/* Contact Form */}
             <div className="md:w-1/2">
               <form className="bg-white p-8 rounded-lg shadow-lg space-y-6">
                 <h3 className="text-2xl font-semibold text-gray-800 mb-4">Contact Us</h3>
@@ -35,8 +35,7 @@ const Contact = () => {
                       type="text"
                       id="name"
                       className="w-full border border-gray-300 px-4 py-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-600"
-                      placeholder="John Doe"
-                    />
+                      />
                   </div>
                   <div className="w-full">
                     <label className="block text-gray-700 text-sm font-semibold mb-2" htmlFor="email">Email</label>
@@ -44,7 +43,6 @@ const Contact = () => {
                       type="email"
                       id="email"
                       className="w-full border border-gray-300 px-4 py-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-600"
-                      placeholder="johndoe@example.com"
                     />
                   </div>
                 </div>
@@ -70,28 +68,42 @@ const Contact = () => {
 
             {/* Contact Details Section */}
             <div className="md:w-1/2 mt-8 md:mt-0">
-              <div className="bg-white p-8 rounded-lg shadow-lg">
-                <h3 className="text-2xl font-semibold text-gray-800 mb-4">Contact Information</h3>
-                <p className="text-lg text-gray-600 mb-6">
-                  Reach out to us at any time, and we’ll do our best to assist you!
-                </p>
-                
-                <div className="mb-4">
-                  <h4 className="text-xl font-semibold text-gray-700">Address</h4>
-                  <p className="text-gray-600">123 Green Street, Garden City, GC 45678</p>
-                </div>
+      <div className="bg-white p-8 rounded-lg shadow-xl border-l-4 border-green-600">
+        <h3 className="text-3xl font-bold text-green-700 mb-6">Contact Information</h3>
+        <p className="text-lg text-gray-600 mb-8">
+          Reach out to us at any time, and we’ll do our best to assist you!
+        </p>
 
-                <div className="mb-4">
-                  <h4 className="text-xl font-semibold text-gray-700">Phone</h4>
-                  <p className="text-gray-600">(123) 456-7890</p>
-                </div>
-
-                <div className="mb-4">
-                  <h4 className="text-xl font-semibold text-gray-700">Email</h4>
-                  <p className="text-gray-600">contact@greengardens.com</p>
-                </div>
-              </div>
+        <div className="space-y-6">
+          {/* Address Section */}
+          <div className="flex items-center space-x-3">
+            <MapPin className="text-green-600 text-2xl" />
+            <div>
+              <h4 className="text-xl font-semibold text-green-700">Address</h4>
+              <p className="text-gray-600">Kutus, Kirinyaga County</p>
             </div>
+          </div>
+
+          {/* Phone Section */}
+          <div className="flex items-center space-x-3">
+            <Phone className="text-green-600 text-2xl" />
+            <div>
+              <h4 className="text-xl font-semibold text-green-700">Phone</h4>
+              <p className="text-gray-600">(+254) 741 085 746</p>
+            </div>
+          </div>
+
+          {/* Email Section */}
+          <div className="flex items-center space-x-3">
+            <Mail className="text-green-600 text-2xl" />
+            <div>
+              <h4 className="text-xl font-semibold text-green-700">Email</h4>
+              <p className="text-gray-600">greenrootsrevivers@gmail.com</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
           </div>
         </div>
       </section>

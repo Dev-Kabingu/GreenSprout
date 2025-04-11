@@ -1,13 +1,14 @@
 import React, { useEffect } from "react";
 import { Leaf, Sun, Sprout } from "lucide-react";
+import { FaFacebookF, FaTwitter, FaInstagram, FaLinkedinIn } from "react-icons/fa";
+
 import nurseryImage from "../assets/img2.jpg";
 import mangoImage from "../assets/img1.jpg";
 import pineImage from "../assets/img3.jpeg";
 import avocadoImage from "../assets/img4.jpeg";
-import heroTree from "../assets/img6.jpeg";
 import seedling from "../assets/seedling.jpg";
 import AOS from "aos";
-import "aos/dist/aos.css";  // Import AOS styles
+import "aos/dist/aos.css"; 
 import {Link} from "react-router-dom"
 
 const Home = () => {
@@ -47,18 +48,53 @@ const Home = () => {
         }}
       >
         <div className="container mx-auto px-6 md:px-12 flex flex-col md:flex-row items-center justify-between gap-10">
-          <div className="text-white max-w-xl">
-            <h1 className="text-4xl md:text-5xl font-bold mb-4" data-aos="fade-up">
-              Grow Your Green World
-            </h1>
-            <p className="text-lg mb-6" data-aos="fade-up" data-aos-delay="200">
-              Discover a wide variety of healthy, affordable trees and plants
-              grown with love at our nursery.
-            </p>
-            <button className="bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-full transition duration-300 " data-aos="fade-up" data-aos-delay="300">
-              Explore Our Collection
-            </button>
-          </div>
+        <div className="text-white max-w-xl flex items-center">
+  <div className="mr-6">
+    <div className="flex flex-col space-y-6">
+      <a href="#" className="text-2xl"><i className="fab fa-facebook"></i></a>
+      <a href="#" className="text-2xl"><i className="fab fa-twitter"></i></a>
+      <a href="#" className="text-2xl"><i className="fab fa-instagram"></i></a>
+      <a href="#" className="text-2xl"><i className="fab fa-linkedin"></i></a>
+    </div>
+  </div>
+  
+  <div className="text-white max-w-4xl mx-auto flex flex-col md:flex-row items-center md:items-start space-y-6 md:space-y-0 md:space-x-12">
+
+  <div className="hidden md:flex flex-col space-y-4 pt-2" data-aos="fade-right">
+    <a href="#"><FaFacebookF className="text-xl hover:text-green-500 transition" /></a>
+    <a href="#"><FaTwitter className="text-xl hover:text-green-500 transition" /></a>
+    <a href="#"><FaInstagram className="text-xl hover:text-green-500 transition" /></a>
+    <a href="#"><FaLinkedinIn className="text-xl hover:text-green-500 transition" /></a>
+  </div>
+
+  <div className="max-w-xl text-center md:text-left">
+    <h3 className="text-green-400 text-lg font-medium mb-2" data-aos="fade-up">
+      Welcome to Our Nursery
+    </h3>
+    <h1 className="text-4xl md:text-5xl font-bold mb-4" data-aos="fade-up">
+      Grow Your Green World
+    </h1>
+    <p className="text-lg mb-6" data-aos="fade-up" data-aos-delay="200">
+      Discover a wide variety of healthy, affordable trees and plants grown with love at our nursery.
+    </p>
+
+    <div className="flex flex-col sm:flex-row justify-center md:justify-start gap-4 mb-4" data-aos="fade-up" data-aos-delay="300">
+      <Link to = '/trees'><button className="bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-full transition duration-300">
+        Explore Our Trees
+      </button></Link>
+    </div>
+
+    <div className="flex md:hidden justify-center space-x-4" data-aos="fade-up" data-aos-delay="400">
+      <a href="#"><FaFacebookF className="text-xl hover:text-green-500 transition" /></a>
+      <a href="#"><FaTwitter className="text-xl hover:text-green-500 transition" /></a>
+      <a href="#"><FaInstagram className="text-xl hover:text-green-500 transition" /></a>
+      <a href="#"><FaLinkedinIn className="text-xl hover:text-green-500 transition" /></a>
+    </div>
+  </div>
+</div>
+
+</div>
+
 
           <div className="w-full max-w-lg flex flex-col items-center justify-center" data-aos="fade-left" data-aos-delay="400">
       <div className="bg-white p-6 rounded-lg shadow-xl w-full max-w-xs mx-auto">
@@ -77,7 +113,7 @@ const Home = () => {
       </section>
 
       {/* About Us */}
-      <section className="py-20 bg-green-50" data-aos="fade-up">
+      <section className="py-20 bg-green-100" data-aos="fade-up">
         <div className="container mx-auto px-6 flex flex-col md:flex-row items-center gap-12">
           {/* Image Section (Left Side) */}
           <div className="relative md:w-1/2 flex justify-center items-center overflow-hidden rounded-xl">
@@ -162,16 +198,16 @@ const Home = () => {
           <h2 className="text-3xl font-bold text-center text-green-800 mb-12">Meet Our Team</h2>
           <div className="grid gap-10 sm:grid-cols-2 md:grid-cols-3">
             {[{
-              name: "Grace M.",
+              name: "David Munene",
               role: "Founder & Lead Horticulturist",
               img: "/assets/team1.jpg",
             }, {
-              name: "Kevin N.",
+              name: "Humphery Mutuma",
               role: "Operations Manager",
               img: "/assets/team2.jpg",
             }, {
               name: "Lydia K.",
-              role: "Marketing & Community",
+              role: "Sales and Marketing Manager",
               img: "/assets/team3.jpg",
             }].map((member, index) => (
               <div
