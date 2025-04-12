@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import GalleryCard from '../Components/GalleryCard';
+import {Link} from 'react-router-dom'
 
 import img1 from '../assets/img1.jpg';
 import img2 from '../assets/img2.jpg';
@@ -55,10 +56,20 @@ const About = () => {
     { src: img26, alt: 'Tree Growth Stages' },
     { src: img27, alt: 'Tree Growth Stages' },
     { src: img3, alt: 'Tree Growth Stages' },
+    { src: img24, alt: 'Tree Growth Stages' },
+    { src: img25, alt: 'Tree Growth Stages' },
+    { src: img26, alt: 'Tree Growth Stages' },
+    { src: img27, alt: 'Tree Growth Stages' },
+    { src: img3, alt: 'Tree Growth Stages' },
+    { src: img24, alt: 'Tree Growth Stages' },
+    { src: img25, alt: 'Tree Growth Stages' },
+    { src: img26, alt: 'Tree Growth Stages' },
+    { src: img27, alt: 'Tree Growth Stages' },
+    { src: img3, alt: 'Tree Growth Stages' },
   ];
 
   const [currentPage, setCurrentPage] = useState(1);
-  const imagesPerPage = 9;
+  const imagesPerPage = 12;
   const totalPages = Math.ceil(galleryImages.length / imagesPerPage);
 
   const startIndex = (currentPage - 1) * imagesPerPage;
@@ -73,9 +84,9 @@ const About = () => {
   return (
     <>
       <section
-        className="relative h-[60vh] bg-cover bg-center flex items-center justify-center"
+        className="relative h-[65vh] bg-cover bg-center flex items-center justify-center"
         style={{
-          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(${img3})`,
+          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(${img18})`,
         }}
       >
         <div className="text-center text-white px-4">
@@ -88,15 +99,62 @@ const About = () => {
         </div>
       </section>
 
+
+      <section className="bg-green-50 py-20 px-6 md:px-16">
+  <div className="max-w-6xl mx-auto grid md:grid-cols-2 items-center gap-10">
+    <img src={img26} alt="Planting Story" className="rounded-lg shadow-md" />
+    <div>
+      <h2 className="text-4xl font-bold text-green-800 mb-4">Our Story</h2>
+      <p className="text-gray-700 text-lg leading-relaxed">
+      GreenRoot Revivers began with a small piece of land, where we planted our first trees with a simple vision — to restore the environment and provide high-quality seedlings for sale. As our passion for nurturing nature grew, so did the demand for our plants, and it became clear that to make a larger impact, we needed more space. <br />When the time came to expand, we reached out to Kirinyaga University for support. In response, they generously offered us a larger piece of land, giving us the opportunity to scale our operations and grow a wider variety of trees. This partnership allowed us to not only meet local demand but also contribute to environmental restoration projects across the region. <br />Today, GreenRoot Revivers is proud to offer sustainably grown trees and plants to farmers, schools, and businesses, all while nurturing the future of our planet. What began with a small piece of land has blossomed into a thriving venture, where each seedling we grow represents hope, resilience, and a greener tomorrow.
+      </p>
+      <p className="italic text-green-700 font-medium mt-4">
+        "We don’t just plant trees — we plant hope for generations."
+      </p>
+    </div>
+  </div>
+</section>
+
+<section className="py-16 px-6 bg-white" data-aos="fade-up">
+  <div className="max-w-6xl mx-auto flex flex-col md:flex-row gap-10 justify-between">
+    
+    {/* Mission */}
+    <div className="bg-gray-50 p-6 rounded-lg shadow-md flex-1 text-center">
+      <h3 className="text-2xl font-semibold text-green-700 mb-3">Our Mission</h3>
+      <p className="text-gray-600">
+        To promote a greener future by growing and supplying high-quality trees, empowering communities with sustainable solutions for the environment and economy.
+      </p>
+    </div>
+
+    {/* Vision */}
+    <div className="bg-gray-50 p-6 rounded-lg shadow-md flex-1 text-center">
+      <h3 className="text-2xl font-semibold text-green-700 mb-3">Our Vision</h3>
+      <p className="text-gray-600">
+        To become the leading tree nursery in the region, recognized for our commitment to quality, innovation, and environmental stewardship.
+      </p>
+    </div>
+
+    {/* Core Values */}
+    <div className="bg-gray-50 p-6 rounded-lg shadow-md flex-1 text-center">
+      <h3 className="text-2xl font-semibold text-green-700 mb-3">Our Core Values</h3>
+      <ul className="text-gray-600 list-disc text-left list-inside">
+        <li>Environmental Responsibility</li>
+        <li>Quality and Integrity</li>
+        <li>Community Empowerment</li>
+        <li>Sustainable Practices</li>
+      </ul>
+    </div>
+
+  </div>
+</section>
       {/* Nursery in Action (Gallery) Section */}
-      <section className="py-16 px-6 bg-gray-50" data-aos="fade-up">
+      <section className="py-16 px-6 bg-green-50" data-aos="fade-up">
         <div className="text-center mb-12">
-          <h2 className="text-3xl font-semibold text-green-700">Our Nursery in Action</h2>
-          <p className="text-gray-600 mt-2">See our nursery at work, from planting trees to caring for them.</p>
+          <h2 className="text-3xl font-semibold text-green-700">Moments That Matter</h2>
+          <p className="text-gray-600 mt-2">Take a glimpse into our journey, from planting our first seedlings to seeing entire landscapes <br /> transform with life. Our gallery showcases the heart of GreenRoot Revivers: the land we cultivate, the hands that nurture it,<br /> and the communities we serve. Each photo captures a milestone, a memory, or a moment of growth. Whether it's a vibrant nursery morning, <br />a tree-planting event with students, or the peaceful rows of thriving seedlings, these snapshots tell the story of our shared commitment to a greener tomorrow.</p>
         </div>
 
-        {/* Gallery Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
           {currentImages.map((image, index) => (
             <GalleryCard key={index} imgSrc={image.src} altText={image.alt} />
           ))}
@@ -135,86 +193,21 @@ const About = () => {
         </div>
       </section>
 
-    <section className="py-16 px-6 bg-gray-100" data-aos="fade-up">
-  <div className="max-w-6xl mx-auto flex flex-col md:flex-row gap-10 justify-between">
-    
-    {/* Mission */}
-    <div className="bg-white p-6 rounded-lg shadow-md flex-1 text-center">
-      <h3 className="text-2xl font-semibold text-green-700 mb-3">Our Mission</h3>
-      <p className="text-gray-600">
-        To promote a greener future by growing and supplying high-quality trees, empowering communities with sustainable solutions for the environment and economy.
-      </p>
-    </div>
+      <section className="bg-white py-16 rounded-lg text-gay-600 text-center mb-12">
+        <h2 className="text-4xl font-semibold mb-6">Get Involved in Our Green Movement</h2>
+        <p className="text-lg mb-6 p-4">
+          We believe that every small action counts, and we’re excited to have you join us on this journey towards a greener future. Whether you’re looking to add beautiful trees to your garden, learn more about sustainable practices, or simply support our mission, we invite you to get involved.
+        </p>
+        <div className="flex justify-center gap-6">
+          <Link
+            to="/HowYouCanHelp"
+            className="bg-green-700 px-8 py-3 rounded-full text-white text-lg font-semibold hover:bg-green-500 hover:text-white transition duration-300"
+          >
+            Learn How You Can Help
+          </Link>
+        </div>
+      </section>
 
-    {/* Vision */}
-    <div className="bg-white p-6 rounded-lg shadow-md flex-1 text-center">
-      <h3 className="text-2xl font-semibold text-green-700 mb-3">Our Vision</h3>
-      <p className="text-gray-600">
-        To become the leading tree nursery in the region, recognized for our commitment to quality, innovation, and environmental stewardship.
-      </p>
-    </div>
-
-    {/* Core Values */}
-    <div className="bg-white p-6 rounded-lg shadow-md flex-1 text-center">
-      <h3 className="text-2xl font-semibold text-green-700 mb-3">Our Core Values</h3>
-      <ul className="text-gray-600 list-disc text-left list-inside">
-        <li>Environmental Responsibility</li>
-        <li>Quality and Integrity</li>
-        <li>Community Empowerment</li>
-        <li>Sustainable Practices</li>
-      </ul>
-    </div>
-
-  </div>
-</section>
-  
-<section className="py-16 px-6 bg-gray-50" data-aos="fade-up">
-  <div className="text-center mb-12">
-    <h2 className="text-3xl font-semibold text-green-700">Frequently Asked Questions</h2>
-    <p className="text-gray-600 mt-2">Find answers to some of the most common questions about our nursery and services.</p>
-  </div>
-
-  <div className="space-y-6">
-    <div className="bg-white p-6 rounded-lg shadow-md">
-      <h3 className="text-xl font-semibold text-green-700">How do I care for my tree after purchase?</h3>
-      <p className="text-gray-600 mt-2">Care varies by species, but general tips include proper watering, regular inspection for pests, and suitable fertilization.</p>
-    </div>
-    <div className="bg-white p-6 rounded-lg shadow-md">
-      <h3 className="text-xl font-semibold text-green-700">Do you deliver trees?</h3>
-      <p className="text-gray-600 mt-2">Yes, we offer delivery services for all tree purchases. Delivery details and fees are provided at checkout.</p>
-    </div>
-    <div className="bg-white p-6 rounded-lg shadow-md">
-      <h3 className="text-xl font-semibold text-green-700">What tree species are available?</h3>
-      <p className="text-gray-600 mt-2">We offer a wide variety of tree species including fruit trees, ornamental trees, indigenous trees, and more. Visit our catalog for full details.</p>
-    </div>
-    <div className="bg-white p-6 rounded-lg shadow-md">
-      <h3 className="text-xl font-semibold text-green-700">Can I return a tree if it’s unhealthy?</h3>
-      <p className="text-gray-600 mt-2">Yes, we offer a return policy for unhealthy trees. Please reach out to our customer support for assistance.</p>
-    </div>
-  </div>
-</section>
-
-<section className="py-16 px-6 bg-white" data-aos="fade-up">
-  <div className="text-center mb-12">
-    <h2 className="text-3xl font-semibold text-green-700">Tree Care Tips</h2>
-    <p className="text-gray-600 mt-2">Learn how to properly care for your trees to help them grow strong and healthy.</p>
-  </div>
-
-  <div className="space-y-8">
-    <div className="bg-gray-100 p-6 rounded-lg shadow-md">
-      <h3 className="text-2xl font-semibold text-green-700">Planting Your Tree</h3>
-      <p className="text-gray-600 mt-2">Ensure that your tree is planted in well-drained soil with enough space to grow. Follow planting guidelines for each species.</p>
-    </div>
-    <div className="bg-gray-100 p-6 rounded-lg shadow-md">
-      <h3 className="text-2xl font-semibold text-green-700">Watering Tips</h3>
-      <p className="text-gray-600 mt-2">Water your tree regularly, especially during the first few months after planting, but avoid overwatering.</p>
-    </div>
-    <div className="bg-gray-100 p-6 rounded-lg shadow-md">
-      <h3 className="text-2xl font-semibold text-green-700">Fertilization</h3>
-      <p className="text-gray-600 mt-2">Feed your trees with organic fertilizers for healthy growth. Be sure to follow the recommended feeding schedule for the species.</p>
-    </div>
-  </div>
-</section>
 
 
     </>

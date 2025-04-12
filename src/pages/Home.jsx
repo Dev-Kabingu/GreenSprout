@@ -2,20 +2,31 @@ import React, { useEffect } from "react";
 import { Leaf, Sun, Sprout } from "lucide-react";
 import { FaFacebookF, FaTwitter, FaInstagram, FaLinkedinIn } from "react-icons/fa";
 
-import nurseryImage from "../assets/img2.jpg";
-import mangoImage from "../assets/img1.jpg";
-import pineImage from "../assets/img3.jpeg";
-import avocadoImage from "../assets/img4.jpeg";
+import cypressImage from "../assets/cypress.jpg";
+import mangoImage from "../assets/mango.jpg";
+import jacarandaImage from "../assets/jacaranda.jpg";
+import avocadoImage from "../assets/hass.jpg";
+import EucalyptusImage from "../assets/eucalypus.jpeg"
+import tomatoesImage from "../assets/treetomatoes.jpeg"
 import seedling from "../assets/seedling.jpg";
+import david from "../assets/davie.jpeg"
+import Humphrey from "../assets/Humphery.jpeg"
+import pondo from "../assets/pondo.jpeg"
+import orange from "../assets/orange.jpeg"
 import AOS from "aos";
 import "aos/dist/aos.css"; 
 import {Link} from "react-router-dom"
 
 const Home = () => {
   const featuredTrees = [
-    { name: "Mango Tree", image: mangoImage },
-    { name: "Pine Tree", image: pineImage },
-    { name: "Avocado Tree", image: avocadoImage },
+    { name: "Hass Ovacado Trees", image: avocadoImage },
+    { name: "Eucalypus Trees", image: EucalyptusImage },
+    { name: "Cypress Trees", image: cypressImage },
+    { name: "Mango Trees", image: mangoImage },
+    { name: "Jacaranda Tree", image: jacarandaImage },
+    { name: "Tree Tomatoes", image: tomatoesImage },
+    { name: "Pondo Trees", image: pondo },
+    { name: "Pixel Orange Trees", image: orange },
   ];
 
   const testimonials = [
@@ -99,9 +110,9 @@ const Home = () => {
           <div className="w-full max-w-lg flex flex-col items-center justify-center" data-aos="fade-left" data-aos-delay="400">
       <div className="bg-white p-6 rounded-lg shadow-xl w-full max-w-xs mx-auto">
         <div className="text-center mb-6">
-          <h3 className="text-2xl font-semibold text-green-700 mb-3">Ready to Grow Your Garden?</h3>
+          <h3 className="text-2xl font-semibold text-green-700 mb-3">Rooted in Purpose, Grown with Love</h3>
           <p className="text-gray-600 mb-4">
-            Start your green journey with our premium selection of plants.
+          Nurture life with every plant you grow. Your green journey begins right here, with heart and soil.
           </p>
          <Link to = '/contact'> <button className="bg-green-700 text-white px-6 py-3 rounded-full text-lg font-semibold hover:bg-green-800 transition duration-300">
             Contact Us Now
@@ -113,7 +124,7 @@ const Home = () => {
       </section>
 
       {/* About Us */}
-      <section className="py-20 bg-green-100" data-aos="fade-up">
+      <section className="py-20 bg-green-50" data-aos="fade-up">
         <div className="container mx-auto px-6 flex flex-col md:flex-row items-center gap-12">
           {/* Image Section (Left Side) */}
           <div className="relative md:w-1/2 flex justify-center items-center overflow-hidden rounded-xl">
@@ -123,14 +134,20 @@ const Home = () => {
               className="w-80 h-72 object-cover rounded-xl shadow-xl"
             />
           </div>
-
-          {/* Text Section (Right Side) */}
+          
           <div className="md:w-1/2 text-center md:text-left flex flex-col justify-center">
-            <h2 className="text-3xl font-bold text-green-700 mb-6">About Our Nursery</h2>
-            <p className="text-gray-700 text-lg leading-relaxed">
-              This nursery was founded by three ambitious students from Kirinyaga University, driven by a shared passion for sustainability and a deep connection to nature. The project was born out of the desire to promote green living and contribute to environmental preservation through the growth and distribution of high-quality trees and plants. With a focus on local and indigenous species, the nursery aims to provide not only beautiful additions to your garden but also healthy, thriving plants that can enhance biodiversity. Our founders bring together diverse expertise, from environmental studies to business management, ensuring that our nursery thrives with eco-friendly practices. We're committed to making a positive impact on the environment, one plant at a time.
-            </p>
-          </div>
+  <h2 className="text-3xl font-bold text-green-700 mb-6">About Our Nursery</h2>
+  <p className="text-gray-700 text-lg leading-relaxed mb-6">
+    We started with a simple vision and a small piece of land—driven by a passion for sustainability and a deep respect for nature. As demand grew and our mission expanded, we sought support to scale our efforts. With the generous backing of Kirinyaga University, we were offered a larger piece of land to nurture and grow more seedlings. Today, we specialize in high-quality, locally adapted trees and plants, aiming to promote reforestation, enhance biodiversity, and support a greener future. Every seed we plant is a step toward lasting environmental change.
+  </p>
+  <Link to="/about">
+    <button className="bg-green-700 hover:bg-green-800 text-white px-6 py-3 rounded-full font-semibold transition duration-300 w-fit mx-auto md:mx-0">
+      Learn More About Us
+    </button>
+  </Link>
+</div>
+
+
         </div>
       </section>
 
@@ -163,13 +180,13 @@ const Home = () => {
       </section>
 
       {/* Featured Trees */}
-      <section className="py-20 bg-green-100 text-center" data-aos="fade-up">
+      <section className="py-20 bg-green-50 text-center" data-aos="fade-up">
         <div className="container mx-auto px-6">
           <h2 className="text-3xl font-bold text-green-800 mb-12">Our Featured Trees</h2>
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-4 gap-8">
             {featuredTrees.map((tree, index) => (
               <div key={index} className="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg transition">
-                <img src={tree.image} alt={tree.name} className="w-full h-60 object-cover" />
+                <img src={tree.image} alt={tree.name} className="w-full h-70 object-cover" />
                 <h3 className="text-xl font-semibold text-green-700 mt-4 mb-2">{tree.name}</h3>
               </div>
             ))}
@@ -183,7 +200,7 @@ const Home = () => {
           <h2 className="text-3xl font-bold text-green-700 mb-12">What Our Customers Say</h2>
           <div className="grid md:grid-cols-3 gap-10">
             {testimonials.map((testi, index) => (
-              <div key={index} className="bg-green-50 p-6 rounded-xl shadow-md">
+              <div key={index} className="bg-gray-50 p-6 rounded-xl shadow-md">
                 <p className="text-gray-700 mb-4 italic">"{testi.comment}"</p>
                 <h4 className="text-green-800 font-semibold">{testi.name}</h4>
               </div>
@@ -199,15 +216,15 @@ const Home = () => {
           <div className="grid gap-10 sm:grid-cols-2 md:grid-cols-3">
             {[{
               name: "David Munene",
-              role: "Founder & Lead Horticulturist",
-              img: "/assets/team1.jpg",
+              role: "Founder & Chairperson",
+              img: david
             }, {
               name: "Humphery Mutuma",
-              role: "Operations Manager",
-              img: "/assets/team2.jpg",
+              role: "Secretary",
+              img: Humphrey,
             }, {
-              name: "Lydia K.",
-              role: "Sales and Marketing Manager",
+              name: "Charlse Koome",
+              role: "Tresurer",
               img: "/assets/team3.jpg",
             }].map((member, index) => (
               <div

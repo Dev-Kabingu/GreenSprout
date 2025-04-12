@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import logo from "../assets/seedling.jpg";
+import logo from "../assets/logo2.png";
 import { Link } from "react-router-dom";
 
 
@@ -11,18 +11,17 @@ const Header = () => {
 
   return (
     <header className="bg-green-900 text-white">
-      <div className="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
-        {/* Logo */}
-        <div className="text-2xl font-bold flex items-center gap-2">
-          <img src={logo} alt="Logo" className="w-10 h-10 rounded-full" />
-          <span>GreenSprout Nursery</span>
+      <div className="max-w-7xl mx-auto px-4 flex justify-between items-center">
+     <div className="text-2xl font-bold flex items-center gap-2">
+          <img src={logo} alt="Logo" className="w-45 h-18 rounded-full" />
+          {/* <span>GreenRoot Revivers</span> */}
         </div>
 
         {/* Desktop Nav */}
         <nav className="hidden md:flex space-x-6 font-medium">
           <Link to="/" className="hover:text-green-300 transition duration-300">Home</Link>
           <Link to="/about" className="hover:text-green-300 transition duration-300">About</Link>
-          <Link to="/trees" className="hover:text-green-300 transition duration-300">Trees</Link>
+          <Link to="/Projects" className="hover:text-green-300 transition duration-300">Projects</Link>
           <Link to="/services" className="hover:text-green-300 transition duration-300">Services</Link>
           <Link to="/contact" className="hover:text-green-300 transition duration-300">Contact</Link>
         </nav>

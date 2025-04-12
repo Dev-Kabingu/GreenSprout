@@ -21,7 +21,7 @@ const Contact = () => {
         </div>
       </section>
 
-      <section className="relative bg-green-100 py-20">
+      <section className="relative bg-green-50 py-20">
         <div className="container mx-auto px-6 md:px-12">
           <div className="md:flex md:space-x-16">
             <div className="md:w-1/2">
@@ -112,7 +112,6 @@ const Contact = () => {
     <div className="mt-16">
       <h3 className="text-2xl font-semibold text-center text-gray-800 mb-4">Find Us Here</h3>
       <div className="w-full h-96 bg-gray-200 rounded-lg">
-        {/* Replace the iframe below with your actual Google Map iframe */}
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3989.6235978417435!2d37.320347999999996!3d-0.566071!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMMKwMzMnNTcuOSJTIDM3wrAxOScxMy4zIkU!5e0!3m2!1sen!2ske!4v1744308449646!5m2!1sen!2ske"
           width="100%"
