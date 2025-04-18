@@ -75,7 +75,7 @@ const Project = () => {
             onClick={() => setSelectedProject(null)}
           >
             <motion.div
-              className="bg-white rounded-xl p-6 max-w-3/4 w-full relative"
+              className="bg-white rounded-xl p-6 max-w-100 w-full relative"
               initial={{ scale: 0.8, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               exit={{ scale: 0.8, opacity: 0 }}
@@ -91,7 +91,7 @@ const Project = () => {
               <img
                 src={selectedProject.image}
                 alt={selectedProject.name}
-                className="w-full h-80 object-cover rounded mb-4"
+                className="w-full h-50 object-cover rounded mb-4"
               />
               <h3 className="text-xl font-bold text-green-700 mb-2">{selectedProject.name}</h3>
               <p className="text-gray-700">{selectedProject.details || selectedProject.description}</p>
