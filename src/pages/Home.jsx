@@ -4,13 +4,13 @@ import { FaFacebookF, FaTwitter, FaInstagram, FaLinkedinIn } from "react-icons/f
 
 import cypressImage from "../assets/cypress.jpg";
 import mangoImage from "../assets/mango.jpg";
-import jacarandaImage from "../assets/Jacaranda.jpg"
+import jacarandaImage from "../assets/jacaranda.jpg"
 import avocadoImage from "../assets/hass.jpg";
 import EucalyptusImage from "../assets/eucalypus.jpeg"
 import tomatoesImage from "../assets/treetomatoes.jpeg"
 import seedling from "../assets/seedling.jpg";
 import david from "../assets/davie.jpeg"
-import Humphrey from "../assets/Humphery.jpeg"
+import Humphrey from "../assets/humphery.jpeg"
 import pondo from "../assets/pondo.jpeg"
 import orange from "../assets/orange.jpeg"
 import AOS from "aos";
