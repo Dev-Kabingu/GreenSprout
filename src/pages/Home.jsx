@@ -4,7 +4,7 @@ import { FaFacebookF, FaTwitter, FaInstagram, FaLinkedinIn } from "react-icons/f
 
 import cypressImage from "../assets/cypress.jpg";
 import mangoImage from "../assets/mango.jpg";
-import jacarandaImage from "../assets/jacaranda.jpg";
+import jacarandaImage from "../assets/Jacaranda.jpg"
 import avocadoImage from "../assets/hass.jpg";
 import EucalyptusImage from "../assets/eucalypus.jpeg"
 import tomatoesImage from "../assets/treetomatoes.jpeg"

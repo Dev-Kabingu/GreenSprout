@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import GalleryCard from '../Components/GalleryCard';
+import GalleryCard from "../components/GalleryCard"
 import {Link} from 'react-router-dom'
 
 import img1 from '../assets/img1.jpg';
