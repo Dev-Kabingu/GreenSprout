@@ -11,6 +11,8 @@ import tomatoesImage from "../assets/treetomatoes.jpeg"
 import seedling from "../assets/seedling.jpg";
 import david from "../assets/davie.jpeg"
 import Humphrey from "../assets/humphery.jpeg"
+
+import mercy from "../assets/mercy.jpeg"
 import pondo from "../assets/pondo.jpeg"
 import orange from "../assets/orange.jpeg"
 import AOS from "aos";
@@ -217,16 +219,30 @@ const Home = () => {
             {[{
               name: "David Munene",
               role: "Founder & Chairperson",
+              course:"Course of study:",
+              studies: "Bs. Construction and Property Management",
               img: david
             }, {
               name: "Humphery Mutuma",
-              role: "Secretary",
+              role: "Vice Chairperson",
+              course:"Course of study:",
+              studies: "Bs. Information Technology",
               img: Humphrey,
             }, {
               name: "Charlse Koome",
               role: "Tresurer",
+              course:"Course of study:",
+              studies: "Bs. Construction and Property Management",
               img: "/assets/team3.jpg",
-            }].map((member, index) => (
+            },
+            {
+              name: "Mercy Kabingu",
+              role: "Secretary",
+              course:"Course of study:",
+              studies: "Bs. Software Engineering (Frontend Developer)",
+              img: mercy,
+            }
+          ].map((member, index) => (
               <div
                 key={index}
                 className="bg-white rounded-xl p-6 flex flex-col items-center text-center shadow-md transition transform duration-300 hover:-translate-y-2 hover:shadow-xl"
@@ -238,6 +254,8 @@ const Home = () => {
                 />
                 <h3 className="text-xl font-bold text-green-800">{member.name}</h3>
                 <p className="text-green-600 font-medium">{member.role}</p>
+                <p className="text-gray-500 font-medium">{member.course}</p>
+                <p className="text-gray-500 font-medium">{member.studies}</p>
               </div>
             ))}
           </div>
