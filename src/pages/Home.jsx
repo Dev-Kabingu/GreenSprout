@@ -92,8 +92,8 @@ const Home = () => {
     </p>
 
     <div className="flex flex-col sm:flex-row justify-center md:justify-start gap-4 mb-4" data-aos="fade-up" data-aos-delay="300">
-      <Link to = '/trees'><button className="bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-full transition duration-300">
-        Explore Our Trees
+      <Link to = '/projects'><button className="bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-full transition duration-300">
+        Explore Our Projects
       </button></Link>
     </div>
 
@@ -182,7 +182,7 @@ const Home = () => {
       </section>
 
       {/* Featured Trees */}
-      <section className="py-20 bg-green-50 text-center" data-aos="fade-up">
+      <section id= "trees" className="py-20 bg-green-50 text-center" data-aos="fade-up" >
         <div className="container mx-auto px-6">
           <h2 className="text-3xl font-bold text-green-800 mb-12">Our Featured Trees</h2>
           <div className="grid md:grid-cols-4 gap-8">
